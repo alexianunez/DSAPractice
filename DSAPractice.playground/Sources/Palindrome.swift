@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    func isPalindrome() -> Bool {
+    public func isPalindrome() -> Bool {
         let input = self.sanitizedString()
         guard !input.isEmpty else {
             return false

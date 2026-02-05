@@ -5,8 +5,8 @@
 //  Created by Alexia Nunez on 2026-02-05.
 //
 
-struct Math {
-    static func collatzConjecture(n: Int) -> [Int] {
+public struct Math {
+    public static func collatzConjecture(n: Int) -> [Int] {
         guard n > 0 else { return [] }
         var steps = [n]
         var current = n
@@ -18,7 +18,7 @@ struct Math {
         return steps
     }
     
-    static func factorial(n: Int) -> Int {
+    public static func factorial(n: Int) -> Int {
         var factorial: Int = 1
         var index: Int = 1
         while index <= n {
