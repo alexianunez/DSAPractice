@@ -14,6 +14,18 @@ struct Math {
             current = current % 2 == 0 ? current / 2 : 3 * current + 1
             steps.append(current)
         }
+        
         return steps
+    }
+    
+    static func factorial(n: Int) -> Int {
+        var factorial: Int = 1
+        var index: Int = 1
+        while index <= n {
+            factorial = factorial * index
+            index += 1
+        }
+        
+        return factorial
     }
 }
