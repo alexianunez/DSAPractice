@@ -44,4 +44,24 @@ public struct Math {
         
         return factorial
     }
+    
+    public static func fibonnaci(n: Int) -> Int {
+        // if n is less than 2, return 1
+        guard n > 2 else { return n }
+        
+        // set up values to hold previous + current variables, as well as an index
+        var previous: Int = 0
+        var current: Int = 1
+        // Starting at 2
+        var index = 2
+        
+        while (index < n) {
+            let next: Int = previous + current
+            previous = current
+            current = next
+            index += 1
+        }
+        
+        return current
+    }
 }
