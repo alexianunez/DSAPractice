@@ -6,6 +6,22 @@
 //
 
 public struct Math {
+    /*
+     Given a positive number S, find the largest number n such that the sum
+     12 + 22 + 32 + ... + n2 is less than or equal to S.
+     */
+    public static func findLargestNumber(n: Int) -> Int {
+        var totalSoFar: Int = 0
+        var number = 1
+        
+        while(totalSoFar + (number * number) <= n) {
+            totalSoFar += number * number
+            number += 1
+        }
+        
+        return number - 1
+    }
+    
     public static func collatzConjecture(n: Int) -> [Int] {
         guard n > 0 else { return [] }
         var steps = [n]
