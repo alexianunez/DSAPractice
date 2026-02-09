@@ -83,4 +83,20 @@ public struct Math {
         
         return current
     }
+    
+    public static func maxValNumAndOfOccurrences(in values: [Int]) -> [Int] {
+        var maxVal: Int = values[0]
+        var count: Int = 0
+        
+        for val in values {
+            if val > maxVal {
+                maxVal = val
+                count = 1
+            } else if val == maxVal {
+                count += 1
+            }
+        }
+        
+        return [maxVal, count]
+    }
 }
