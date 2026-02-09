@@ -55,8 +55,27 @@ public struct Math {
         // Starting at 2
         var index = 2
         
-        while (index < n) {
+        while (index <= n) {
             let next: Int = previous + current
+            previous = current
+            current = next
+            index += 1
+        }
+        
+        return current
+    }
+    
+    public static func tribonnaci(n: Int) -> Int {
+        guard n > 2 else { return n }
+        
+        var previous2: Int = 0
+        var previous: Int = 1
+        var current: Int = 1
+        var index: Int = 3
+        
+        while (index <= n) {
+            let next = previous2 + previous + current
+            previous2 = previous
             previous = current
             current = next
             index += 1
