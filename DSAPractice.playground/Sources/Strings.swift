@@ -45,7 +45,7 @@ extension String {
 
 extension String {
     public static func longestCommonPrefix(s1: String, s2: String) -> String {
-        let n = s1.count < s1.count ? s1.count : s2.count
+        let n = s1.count < s2.count ? s1.count : s2.count
         var commonPrefix: String = ""
         var i: Int = 0
         while (i < n) {
