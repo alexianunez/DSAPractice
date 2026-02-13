@@ -1,0 +1,22 @@
+import Foundation
+
+// Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+
+
+func rotate(_ nums: inout [Int], _ k: Int) {
+    // Creating an index to power our while loop
+    var index = k
+
+    while (index <= nums.count - 1) {
+        let val = nums[index]
+        nums[0] = val
+        index += 1
+    }
+}
+
+var nums = [1,2,3,4,5,6,7]
+rotate(&nums, 3)
+print(nums)
+
+
+

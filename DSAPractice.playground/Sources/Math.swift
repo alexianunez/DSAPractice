@@ -81,6 +81,29 @@ public struct Math {
         return answer
     }
     
+    /*
+     class Solution {
+     public:
+         int digitSum(int n) {
+             int sum = 0;
+             while (n > 0) {
+                 sum += n % 10;
+                 n /= 10;
+             }
+             return sum;
+         }
+         
+         int magicNumber(int n) {
+             while (n > 9) {
+                 n = digitSum(n);
+             }
+             if (n < 10) {
+                 return n;
+             }
+         }
+     };
+     */
+    
     public static func tribonnaci(n: Int) -> Int {
         guard n > 2 else { return n }
         
