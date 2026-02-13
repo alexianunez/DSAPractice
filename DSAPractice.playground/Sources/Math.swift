@@ -84,6 +84,21 @@ public struct Math {
         return current
     }
     
+    public static func twoSumIndexes(_ nums: [Int], _ target: Int) -> [Int] {
+        var hashMap: [Int: Int] = [:]
+        for (index, num) in nums.enumerated() {
+            let complement = target - num
+
+            if let found = hashMap[complement] {
+                return [found, index]
+            } else {
+                hashMap[num] = index
+            }
+        }
+        
+        return []
+    }
+    
     public static func maxValNumAndOfOccurrences(in values: [Int]) -> [Int] {
         var maxVal: Int = values[0]
         var count: Int = 0
