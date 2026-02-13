@@ -29,23 +29,17 @@ extension String {
         return true
     }
     
-    public func reverseWithTwoPointers() -> String {
-        var chars = Array(self)
-        var left = 0
-        var right = chars.endIndex - 1
-        
-        while left < right {
-            let leftCharacter = chars[left]
-            let rightCharacter = chars[right]
-            
-            chars[left] = rightCharacter
-            chars[right] = leftCharacter
-            
-            left += 1
-            right -= 1
+    public func reverseWithReverseIndex() -> String {
+        var result = ""
+        var index = self.count - 1
+        while index >= 0 {
+            let castIndex = self.index(self.endIndex, offsetBy: index)
+            let char = self[castIndex]
+            result.append(char)
+            index -= 1
         }
         
-        return String(chars)
+        return result
     }
 
     private func sanitizedString() -> String {
