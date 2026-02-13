@@ -28,6 +28,25 @@ extension String {
 
         return true
     }
+    
+    public func reverseWithTwoPointers() -> String {
+        var chars = Array(self)
+        var left = 0
+        var right = chars.endIndex - 1
+        
+        while left < right {
+            let leftCharacter = chars[left]
+            let rightCharacter = chars[right]
+            
+            chars[left] = rightCharacter
+            chars[right] = leftCharacter
+            
+            left += 1
+            right -= 1
+        }
+        
+        return String(chars)
+    }
 
     private func sanitizedString() -> String {
         // TODO: - replace with regex
